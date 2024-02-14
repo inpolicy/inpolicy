@@ -1,141 +1,155 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
 body {
   text-align: center;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: Verdana, Geneva, Tahoma,sans-serif;
-  background-color:whitesmoke;
-  
+  background-color: whitesmoke;
 }
+
 table {
-  font-family: Verdana;
+
   color: rgb(24, 21, 20);
   border-collapse: collapse;
   width: 100%;
   text-align: center;
   background-color: azure;
-  }
-  #customer th{background-color:#b8c2c7;}
-  #customer tr:nth-child(odd){background-color: #fdfcfc;}
+}
 
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
-  }
-  td, th {
+#customer th {
+  background-color: #b8c2c7;
+}
+
+#customer tr:nth-child(odd) {
+  background-color: #fdfcfc;
+}
+
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+td,
+th {
   border: 1px solid #5f5c5c;
   text-align: center;
-  font-size:medium;
-  padding:5px;
-  }
-  h1,form{
-  font-family: Verdana;
+  font-size: medium;
+  padding: 5px;
+}
+
+h1,
+form {
+
   text-align: center;
-  }
-  .myDiv{
-  font-family: Verdana;
+}
+
+.myDiv {
+
   text-align: center;
-  background-color: rgb(175, 215, 233); 
+  background-color: rgb(175, 215, 233);
   border-width: 3px;
   border-radius: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  max-width: 1300px;
-  font-size:large;
+  padding: 30px;
+  margin: auto;
+  max-width: auto;
+  font-size: large;
   font-style: bold;
 
-  }
-  
-  .myDiv1{    
-  font-family: Verdana;
+}
+
+.myDiv1 {
+
   text-align: center;
   text-decoration: wavy;
   border: 1px solid #706e6e;
   border-radius: 10px;
-  border-width: 3px;  
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  }
-  .navebar{
-  font-variant: Verdana;
+  border-width: 3px;
+  padding: 20px;
+}
+
+.navebar {
+
   text-align: center;
   border: 2px solid #0b0c0c;
   border-width: 3px;
   border-radius: 10px;
   color: #12161a;
-  background-color: rgb(175, 215, 233);  
+  background-color: rgb(175, 215, 233);
   padding-left: 10px;
-  padding-right: 10px;;
+  padding-right: 10px;
+  ;
   padding-bottom: 5px;
-  }
+  max-width: 100%;
+}
 
-  .butt{
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 10%;
-    font-family: Verdana;
-    font-weight: bold;
-    font-size: medium;
-    box-sizing: content-box;
-    cursor: pointer;
-    background-color: rgb(89, 231, 212);
-  }
-          
-      form {
-          text-align: left;
-          display:flex;
-          flex-wrap:wrap;
-          gap: 50px;
-      }
+.butt {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 10%;
 
-      .div{
-        text-align: center;
-        border: 2px solid #706e6e;
-        border-radius: 10px;
-        border-width: 3px;
+  font-weight: bold;
+  font-size: medium;
+  box-sizing: content-box;
+  cursor: pointer;
+  background-color: rgb(89, 231, 212);
+}
 
-      }
+form {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
 
-      .form-group {
-          flex: 20;
-          display:grid;
-          flex-direction: column;
-      }
+.div {
+  text-align: center;
+  border: 2px solid #706e6e;
+  border-radius: 10px;
+  border-width: 3px;
 
-      label {
-          margin-bottom: 5px;
-          margin-top: 5px;
-      }
+}
 
-      input,
-      select {
-          padding: 8px;
-          margin-top: 10px;
-          margin-bottom: 10px;
-          width: 100%;
-          box-sizing: border-box;
-      }
+.form-group {
+  flex: 20;
+  display: grid;
+  flex-direction: column;
+  text-transform: uppercase;
+}
 
-      input[type="submit"] {
-        background-color: rgb(89, 231, 212);
-          color: rgb(20, 17, 17);
-          cursor:pointer;
-          font-weight: bold;
-          font-size: large;
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
+label {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
 
-      input[type="submit"]:hover {
-          background-color: rgb(111, 241, 117);
-      }
+input,
+select {
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: rgb(89, 231, 212);
+  color: rgb(20, 17, 17);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(111, 241, 117);
+}

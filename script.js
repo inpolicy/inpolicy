@@ -1,51 +1,51 @@
 //<!-- Add this script tag to include html2canvas -->
-    
+
 function takeScreenshot() {
-// Get the customer table element
-const table = document.getElementById('customer');
+    // Get the customer table element
+    const table = document.getElementById('customer');
 
-// Set up the options for html2canvas
-const options = {
-    scale: 5, // Increase the scale for better quality
-};
+    // Set up the options for html2canvas
+    const options = {
+        scale: 5, // Increase the scale for better quality
+    };
 
-// Use html2canvas to capture the table as an image
-html2canvas(table, options).then(function (canvas) {
+    // Use html2canvas to capture the table as an image
+    html2canvas(table, options).then(function (canvas) {
 
-    // Create a new canvas with white space and a title
-    const newCanvas = document.createElement('canvas');
-    const context = newCanvas.getContext('2d');
+        // Create a new canvas with white space and a title
+        const newCanvas = document.createElement('canvas');
+        const context = newCanvas.getContext('2d');
 
-    // Set the new canvas size including white space and title
-    const whiteSpace = 150; // Adjust this value for the desired white space
-    const titleHeight = 200; // Adjust this value for the title height
-    newCanvas.width = canvas.width + 2 * whiteSpace;
-    newCanvas.height = canvas.height + 2 * whiteSpace + titleHeight;
+        // Set the new canvas size including white space and title
+        const whiteSpace = 150; // Adjust this value for the desired white space
+        const titleHeight = 200; // Adjust this value for the title height
+        newCanvas.width = canvas.width + 2 * whiteSpace;
+        newCanvas.height = canvas.height + 2 * whiteSpace + titleHeight;
 
-    // Draw the white background
-    context.fillStyle = 'white';
-    context.fillRect(0, 0, newCanvas.width, newCanvas.height);
+        // Draw the white background
+        context.fillStyle = 'white';
+        context.fillRect(0, 0, newCanvas.width, newCanvas.height);
 
-    // Draw the title with the current date in the center
-    context.font = '80px Verdana'; // Adjust the font size and style
-    context.fillStyle = 'black'; // Adjust the text color
-    context.textAlign = 'center'; // Center the text
-    context.fillText('Customer Policy Report -- ' + getCurrentDate(), newCanvas.width / 2, titleHeight - 10);
+        // Draw the title with the current date in the center
+        context.font = '80px Verdana'; // Adjust the font size and style
+        context.fillStyle = 'black'; // Adjust the text color
+        context.textAlign = 'center'; // Center the text
+        context.fillText('Customer Policy Report -- ' + getCurrentDate(), newCanvas.width / 2, titleHeight - 10);
 
-    // Draw the original screenshot onto the new canvas with white space
-    context.drawImage(canvas, whiteSpace, titleHeight + whiteSpace);
+        // Draw the original screenshot onto the new canvas with white space
+        context.drawImage(canvas, whiteSpace, titleHeight + whiteSpace);
 
-    // Convert the new canvas to a data URL
-    const dataUrl = newCanvas.toDataURL();
+        // Convert the new canvas to a data URL
+        const dataUrl = newCanvas.toDataURL();
 
-    // Create a link element to download the screenshot
-    const link = document.createElement('a');
-    link.href = dataUrl;
-    link.download = 'CustomerTableScreenshot.png';
+        // Create a link element to download the screenshot
+        const link = document.createElement('a');
+        link.href = dataUrl;
+        link.download = 'Report.png';
 
-    // Trigger a click event on the link to start the download
-    link.click();
-});
+        // Trigger a click event on the link to start the download
+        link.click();
+    });
 }
 // Function to get the current date in the format YYYY-MM-DD
 function getCurrentDate() {
@@ -85,9 +85,9 @@ function entry() {
 
     // Create a new row for the table
     var newRow = tableBody.insertRow(tableBody.rows.length);
-    
+
     var sNoCell = newRow.insertCell(0);
-    sNoCell.innerHTML = tableBody.rows.length; // Serial number is the row inde
+    sNoCell.innerHTML = tableBody.rows.length; // Serial number is the row index
 
     var dateCell = newRow.insertCell(1);
     dateCell.innerHTML = date;
@@ -133,5 +133,5 @@ function entry() {
     companyCell.innerHTML = company;
 
     // Clear the form
-    document.getElementById("myForm").reset();    
+    document.getElementById("myForm").reset();
 }
