@@ -1,122 +1,125 @@
 <!DOCTYPE html>
 <html>
-<!-- Add this script tag to your HTML file to include jsPDF -->
-<!--script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <title>Policy Report</title>
 
-    <link rel="icon" type="image/x-icon" href="insurance.png">
+    <title>Policy Report</title>
+    <link rel="icon" type="image/x-icon" href="assets/insurance.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
 </head>
 
 <body>
-  <div class="navebar">
-    <h1>Insurance Policy Agency</h1>
-</div>
-<br>
-<div class="div">
-    <h1>Insurance Policy Report</h1>
-    <h2>Give the credentials of the Customer</h2>
-</div>
-<br>
-<div class="myDiv">
-
-    <form id="myForm">
-
-        <div class="form-group">
-
-            <label for="date">Date:</label>
-            <input type="date" id="date" required>
-
-            <label for="regNo">Reg. No:</label>
-            <input type="text" id="regNo" required autocomplete="off">
-
-            <label for="commPercent">Comm%:</label>
-            <input type="text" id="commPercent" required autocomplete="off">
-
-        </div>
-
-        <div class="form-group">
-
-            <label for="insuredName">Insured Name:</label>
-            <input type="text" style="text-transform: uppercase" id="insuredName" autocomplete="off" required>
-
-            <label for="od">OD:</label>
-            <input type="text" id="od" required autocomplete="off">
-
-            <label for="paymentTo">Payment to:</label>
-            <input type="text" style="text-transform: uppercase" id="paymentTo" autocomplete="off" required>
-
-        </div>
-
-        <div class="form-group">
-
-            <label for="policyNumber">Policy No:</label>
-            <input type="text" style="text-transform: uppercase" id="policyNumber" autocomplete="off" required>
-
-            <label for="tpPre">TP Pre:</label>
-            <input type="text" id="tpPre" required autocomplete="off">
-
-            <label for="company">Company:</label>
-            <input type="text" style="text-transform: uppercase" id="company" autocomplete="off" required>
-            
-        </div>
-
-        <div class="form-group">
-
-          <label for="type">Type:</label>
-          <select id="type" required>
-              <option value="Bus">BUS</option>
-              <option value="LCV">LCV</option>
-              <option value="MISD">MISD</option>
-              <option value="None" inputmode="text">None</option>
-          </select>
-
-            <label for="tPre">T Pre:</label>
-            <input type="text" id="tPre" required autocomplete="off">
-            <input type="submit" value="Submit" onclick="entry()">
-
-        </div>
-
-    </form>
-</div><br>
-    <div class="myDiv1">
-      <table class= "table" id="customer" width: 100%;left: 50px>
-        <thead>
-            <tr>
-                <h1>Customer Policy Report</h1>
-                <th>S.No</th>
-                <th>Date</th>
-                <th>Insured Name</th>
-                <th>Policy No</th>
-                <th>Type</th>
-                <th>Reg. No</th>
-                <th>OD</th>
-                <th>TP PRE</th>
-                <th>NET</th>
-                <th>T PRE</th>
-                <th>Comm%</th>
-                <th>Comm</th>
-                <th>Payment To</th>
-                <th>Company</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody">
-            <!-- Table data will be inserted here using JavaScript -->
-        </tbody>
-    </table>
+    <div class="navebar">
+        <h1>Insurance Policy Agency</h1>
+    </div>
     <br>
-    <!-- Button to take screenshot of the customer table -->
-    <button class="butt" onclick="takeScreenshot()">Download</button>
-</div>    
+    <div class="div">
+        <h1>Insurance Policy Report</h1>
+        <h2>Give the credentials of the Customer</h2>
+    </div>
+    <br>
+    <div class="myDiv">
+
+        <form id="myForm">
+
+            <div class="form-group">
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="regNo">Reg. No:</label>
+                <input type="text" id="regNo" required autocomplete="off">
+
+                <label for="commPercent">Comm%:</label>
+                <input type="text" id="commPercent" required autocomplete="off">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="insuredName">Insured Name:</label>
+                <input type="text" id="insuredName" autocomplete="off" required>
+
+                <label for="od">OD:</label>
+                <input type="text" id="od" required autocomplete="off">
+
+                <label for="paymentTo">Payment to:</label>
+                <input type="text" id="paymentTo" autocomplete="off" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="policyNumber">Policy No:</label>
+                <input type="text" id="policyNumber" autocomplete="off" required>
+
+                <label for="tpPre">TP Pre:</label>
+                <input type="text" id="tpPre" required autocomplete="off">
+
+                <label for="company">Company:</label>
+                <input type="text"  id="company" autocomplete="off" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="type">Type:</label>
+                <select id="type" required>
+                    <option value="Bus">BUS</option>
+                    <option value="LCV">LCV</option>
+                    <option value="MISD">MISD</option>
+                    <option value="None" inputmode="text">None</option>
+                </select>
+
+                <label for="tPre">T Pre:</label>
+                <input type="text" id="tPre" required autocomplete="off">
+                <input type="submit" value="Submit" onclick="entry()">
+
+            </div>
+
+        </form>
+    </div><br>
+    <div class="myDiv1">
+        <table class="table" id="customer" width: 100%;left: 50px>
+            <thead>
+                <tr>
+                    <h1>Customer Policy Report</h1>
+                    <th>S.No</th>
+                    <th>Date</th>
+                    <th>Insured Name</th>
+                    <th>Policy No</th>
+                    <th>Type</th>
+                    <th>Reg. No</th>
+                    <th>OD</th>
+                    <th>TP PRE</th>
+                    <th>NET</th>
+                    <th>T PRE</th>
+                    <th>Comm%</th>
+                    <th>Comm</th>
+                    <th>Payment To</th>
+                    <th>Company</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Table data will be inserted here using JavaScript -->
+            </tbody>
+        </table>
+        <br>
+        <!-- Button to take screenshot of the customer table -->
+        <button class="butt" onclick="takeScreenshot()">Download</button>
+    </div>
 </body>
+
 </html>
