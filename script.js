@@ -15,7 +15,7 @@ function takeScreenshot() {
         // Create a new canvas with white space and a title
         const newCanvas = document.createElement('canvas');
         const context = newCanvas.getContext('2d');
-
+   
         // Set the new canvas size including white space and title
         const whiteSpace = 150; // Adjust this value for the desired white space
         const titleHeight = 200; // Adjust this value for the title height

@@ -11,10 +11,10 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: whitesmoke;
+  margin: 0px;
 }
 
 table {
-
   color: rgb(24, 21, 20);
   border-collapse: collapse;
   width: 100%;
@@ -47,62 +47,40 @@ th {
   padding: 5px;
 }
 
-h1,
-form {
 
-  text-align: center;
-}
 
 .myDiv {
-
   text-align: center;
   background-color: rgb(175, 215, 233);
-  border-width: 3px;
-  border-radius: 20px;
-  padding: 30px;
-  margin: auto;
-  max-width: auto;
-  font-size: large;
-  font-style: bold;
+  border-radius: 15px;
+  padding: 0px 30px 20px;
+  margin: 0 75px;
+}
+
+.div {
+  margin: 0 75px;
+  border-radius: 15px;
+  background-color: rgb(175, 215, 233);
+  padding: 20px 30px;
 
 }
 
 .myDiv1 {
-
   text-align: center;
   text-decoration: wavy;
-  border: 1px solid #706e6e;
+  border: 2px solid #191818;
   border-radius: 10px;
-  border-width: 3px;
+  
   padding: 20px;
+  margin: 20px 20px;
 }
 
 .navebar {
-
-  text-align: center;
-  border: 2px solid #0b0c0c;
-  border-width: 3px;
+  border: #c9eaea;
+  margin: 10px 75px;
   border-radius: 10px;
-  color: #12161a;
   background-color: rgb(175, 215, 233);
-  padding-left: 10px;
-  padding-right: 10px;
-  ;
-  padding-bottom: 5px;
-  max-width: 100%;
-}
-
-.butt {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 10%;
-
-  font-weight: bold;
-  font-size: medium;
-  box-sizing: content-box;
-  cursor: pointer;
-  background-color: rgb(89, 231, 212);
+  padding: 5px 10px;
 }
 
 form {
@@ -112,17 +90,9 @@ form {
   gap: 50px;
 }
 
-.div {
-  text-align: center;
-  border: 2px solid #706e6e;
-  border-radius: 10px;
-  border-width: 3px;
-
-}
-
 .form-group {
   flex: 20;
-  display: grid;
+  display: flex;
   flex-direction: column;
   text-transform: uppercase;
 }
@@ -152,4 +122,16 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: rgb(111, 241, 117);
+}
+
+.butt {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 10%;
+  font-weight: bold;
+  font-size: medium;
+  box-sizing: content-box;
+  cursor: pointer;
+  background-color: rgb(89, 231, 212);
 }
