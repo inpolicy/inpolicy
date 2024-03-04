@@ -4,11 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -17,25 +14,22 @@
     <link rel="icon" type="image/x-icon" href="assets/insurance.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-
 </head>
 
 <body>
-    <div class="navebar">
-        <h1>Insurance Policy Agency</h1>
-    </div>
-    <br>
-    <div class="div">
-        <h1>Insurance Policy Report</h1>
-        <h2>Give the credentials of the Customer</h2>
-    </div>
-    <br>
+    <header>
+        <div class="navebar">
+            <h1>Insurance Policy Agency</h1>
+        </div><br>
+    </header><br>
+
     <div class="myDiv">
-
+        <div class="div">
+            <h1>Insurance Policy Report</h1>
+            <h2>Give the credentials of the Customer</h2>
+        </div>
         <form id="myForm">
-
             <div class="form-group">
-
                 <label for="date">Date:</label>
                 <input type="date" id="date" required>
 
@@ -44,11 +38,8 @@
 
                 <label for="commPercent">Comm%:</label>
                 <input type="text" id="commPercent" required autocomplete="off">
-
             </div>
-
             <div class="form-group">
-
                 <label for="insuredName">Insured Name:</label>
                 <input type="text" id="insuredName" autocomplete="off" required>
 
@@ -57,11 +48,8 @@
 
                 <label for="paymentTo">Payment to:</label>
                 <input type="text" id="paymentTo" autocomplete="off" required>
-
             </div>
-
             <div class="form-group">
-
                 <label for="policyNumber">Policy No:</label>
                 <input type="text" id="policyNumber" autocomplete="off" required>
 
@@ -69,12 +57,9 @@
                 <input type="text" id="tpPre" required autocomplete="off">
 
                 <label for="company">Company:</label>
-                <input type="text"  id="company" autocomplete="off" required>
-
+                <input type="text" id="company" autocomplete="off" required>
             </div>
-
             <div class="form-group">
-
                 <label for="type">Type:</label>
                 <select id="type" required>
                     <option value="Bus">BUS</option>
@@ -82,17 +67,16 @@
                     <option value="MISD">MISD</option>
                     <option value="None" inputmode="text">None</option>
                 </select>
-
                 <label for="tPre">T Pre:</label>
                 <input type="text" id="tPre" required autocomplete="off">
+                <label for=""></label>
                 <input type="submit" value="Submit" onclick="entry()">
-
             </div>
-
         </form>
     </div><br>
+
     <div class="myDiv1">
-        <table class="table" id="customer" width: 100%;left: 50px>
+        <table class="table" id="customer" width: 100%;>
             <thead>
                 <tr>
                     <h1>Customer Policy Report</h1>
