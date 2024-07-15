@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Javascript lib to capture the table and download it -->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!-- Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <title>Policy Report</title>
+
     <link rel="icon" type="image/x-icon" href="assets/insurance.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
@@ -24,9 +27,8 @@
     </header><br>
 
     <div class="myDiv">
-
-        <div class="div">
-            <h1>Insurance Policy Report</h1>
+        <div>
+            <h1>Generate Policy Report</h1>
             <h2>Give the credentials of the Customer</h2>
         </div>
         <form id="myForm">
@@ -70,7 +72,8 @@
                 </select>
                 <label for="tPre">T Pre:</label>
                 <input type="text" id="tPre" required autocomplete="off">
-                <label for=""></label>
+                <!-- <label for=""></label> -->
+                 <br>
                 <input type="submit" value="Submit" onclick="entry()">
             </div>
         </form>
@@ -81,7 +84,7 @@
             <thead>
                 <tr>
                     <h1>Customer Policy Report</h1>
-                    <th>S.No</th> 
+                    <th>S.No</th>
                     <th>Date</th>
                     <th>Insured Name</th>
                     <th>Policy No</th>
@@ -96,11 +99,6 @@
                     <th>Payment To</th>
                     <th>Company</th>
                 </tr>
-                <!-- 
-                OD - Own Damage
-                TP PRE - Third party premium
-                T Pre -Total premium
-                -->
             </thead>
             <tbody id="tableBody">
                 <!-- Table data will be inserted here using JavaScript -->
@@ -112,22 +110,22 @@
     </div>
 </body>
 
-    <diV class="Description">
-        
-        <ul>
-                NOTE - OD - Own Damage ||
-                TP.PRe - Third party premium || 
-                T.PRe - Total premium ||
-                Comm - Commision
-        </ul>
+<diV class="Description">
 
-        <footer>
-            <div>
-                <div class="copyright">Copyright &copy; 2024, Insurance policy. <span class="wrdbrk">All rights reserved
-                    </span></div>
-            </div>
-        </footer>
-    </diV>
+    <ul>
+        NOTE - OD - Own Damage ||
+        TP.PRe - Third party premium ||
+        T.PRe - Total premium ||
+        Comm - Commision
+    </ul>
+
+    <footer>
+        <div>
+            <div class="copyright">Copyright &copy; 2024, <span class="wrdbrk">All rights reserved
+                </span></div>
+        </div>
+    </footer>
+</diV>
 
 
 

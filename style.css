@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 
 * {
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -11,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color:white;
+  background-color: white;
   margin: 0px;
 }
 
@@ -48,52 +46,39 @@ th {
   padding: 5px;
 }
 
-
-
 .myDiv {
   text-align: center;
-  background-color:#C5CBE3;
+  background-color: #C5CBE3;
   border-radius: 10px;
   padding: 10px 30px 20px 30px;
   margin: 70px 20px 0px 20px;
-  
+
 }
-
-
-.div {
-  margin: 0 75px;
-  border-radius: 15px;
-  /* background-color: #C5CBE3; */
-  padding:10px 20px 10px 20px;
-  color:rgb(19, 33, 58);
-  
-}
-
 
 .myDiv1 {
   text-align: center;
   text-decoration: wavy;
   border: 2px solid #191818;
   border-radius: 10px;
-  
+
   padding: 0px 20px 50px 20px;
   margin: 20px 30px 50px 30px;
 
   background-image: url('assets/bg1.png');
   background-repeat: no-repeat;
   background-size: 500px 500px;
-  background-attachment:scroll;
+  background-attachment: scroll;
   background-position: center;
 }
 
-.navebar {      
+.navebar {
   background-color: #4056A1;
   padding: 5px 10px;
   color: white;
-  position:fixed;
-   top: 0;
-    z-index: 1020;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1020;
+  width: 100%;
 }
 
 form {
@@ -112,7 +97,7 @@ form {
 
 label {
   margin-bottom: 10px;
-  margin-top: 10px;  
+  margin-top: 10px;
 }
 
 input,
@@ -147,13 +132,14 @@ input[type="submit"]:hover {
   cursor: pointer;
   background-color: #4056A1;
   color: white;
-  position:relative;
+  position: relative;
 }
-.butt:hover{
+
+.butt:hover {
   background-color: rgb(12, 172, 15);
 }
 
-.Description{
+.Description {
   background-color: #4056A1;
   padding: 30px 20px;
   font-size: 18px;

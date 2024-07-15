@@ -36,6 +36,7 @@ function takeScreenshot() {
         context.drawImage(canvas, whiteSpace, titleHeight + whiteSpace);
 
         // Convert the new canvas to a data URL
+        //This method converts the contents of the new canvas into base64 encoded data URL Representing the image in PNG format
         const dataUrl = newCanvas.toDataURL();
 
         // Create a link element to download the screenshot
@@ -47,6 +48,7 @@ function takeScreenshot() {
         link.click();
     });
 }
+
 // Function to get the current date in the format YYYY-MM-DD
 function getCurrentDate() {
     const today = new Date();
@@ -121,7 +123,8 @@ function entry() {
     var commPercentCell = newRow.insertCell(10);
     commPercentCell.innerHTML = commPercent;
 
-    // Calculate Comm
+    // Calculate Commision 
+    //formula --> (Comm % / 100)* Net amount.
     var comm = (parseFloat(commPercent) / 100) * net;
     var commCell = newRow.insertCell(11);
     commCell.innerHTML = comm.toFixed(2);
