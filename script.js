@@ -1,4 +1,7 @@
 //<!-- Add this script tag to include html2canvas -->
+// html2canvas is a JavaScript library that enables users to produce screenshots of an entire webpage or portions of a webpage. 
+// The screenshots are taken directly on the user's browser
+
 
 function takeScreenshot() {
     // Get the customer table element
@@ -15,7 +18,7 @@ function takeScreenshot() {
         // Create a new canvas with white space and a title
         const newCanvas = document.createElement('canvas');
         const context = newCanvas.getContext('2d');
-   
+
         // Set the new canvas size including white space and title
         const whiteSpace = 150; // Adjust this value for the desired white space
         const titleHeight = 200; // Adjust this value for the title height
